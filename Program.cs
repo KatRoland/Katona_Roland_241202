@@ -167,6 +167,7 @@ int kezdetiossz = books.Sum(e => e.getKeszlet());
 
 for ( int i = 0; i < 100; i++ )
 {
+    if(books.Count == 0) { break; }
     int bookId = rnd.Next(0,books.Count);
     Book randombook = books[bookId];
     if(randombook.getKeszlet() > 0)
